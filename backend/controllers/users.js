@@ -4,7 +4,7 @@ const User = require('../models/user')
 
 // Create new User
 router.post('/', async (request, response) => {
-    const { username, name, password } = request.body
+    const { username, name, role, password } = request.body
 
     if ( !password || password.length < 3) {
         return response.status(400).json({
@@ -18,6 +18,7 @@ router.post('/', async (request, response) => {
     const user = new User({
         username,
         name,
+        role,
         passwordHash,
     })
 
@@ -50,6 +51,7 @@ router.put('/:id', async (request, response, next) => {
     const user = {
         username: body.username,
         name: body.name,
+        role: body.role,
         passwordHash: body.passwordHash,
     }
 

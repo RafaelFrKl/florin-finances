@@ -5,6 +5,7 @@ Content-Type: application/json
 {
     "username": "testuser",
     "name": "TestUser",
+    "role": "admin",
     "password": "testpass"
 }
 
@@ -13,18 +14,19 @@ GET http://localhost:3001/api/users
 Content-Type: application/json
 
 ### Get individual User
-GET http://localhost:3001/api/users/648b943a03b416bc51f992d3
+GET http://localhost:3001/api/users/648b952f409b802a0e4ec553
 Content-Type: application/json
 
 ### Test - Update User
-PUT http://localhost:3001/api/users/648b943a03b416bc51f992d3
+PUT http://localhost:3001/api/users/648b952f409b802a0e4ec553
 Content-Type: application/json
 
 {
     "username": "testuser",
     "name": "Test",
+    "role": "user",
     "password": "testpass"
 }
 
 ### Delete User
-DELETE  http://localhost:3001/api/users/648b943a03b416bc51f992d3
+DELETE  http://localhost:3001/api/users/648b952f409b802a0e4ec553

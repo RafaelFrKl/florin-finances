@@ -9,6 +9,7 @@ const userSchema = mongoose.Schema({
         unique: true
     },
     name: String,
+    role: String,
     passwordHash: String,
     /*blogs: [
         {
