@@ -1,41 +1,37 @@
 import { useState } from 'react'
 
-const LoginForm = ({ onLogin }) => {
+const LoginForm = ({ login }) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault()
-        onLogin(username, password)
+        await login(username, password)
     }
 
     return (
-        <div>
-            <h2>Log in to application</h2>
-
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Username: </label>
-                    <input
-                        value={username}
-                        onChange={({ target }) => setUsername(target.value)}
-                        id='username'
-                    />
-                </div>
-                <div>
-                    <label>Password: </label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={({ target }) => setPassword(target.value)}
-                        id="password"
-                    />
-                </div>
-                <button id="login-button" type="submit">
-          login
-                </button>
-            </form>
-        </div>
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label>Username: </label>
+                <input
+                    id='username'
+                    value={username}
+                    onChange={({ target }) => setUsername(target.value)}
+                />
+            </div>
+            <div>
+                <label>Password: </label>
+                <input
+                    id='password'
+                    type="password"
+                    value={password}
+                    onChange={({ target }) => setPassword(target.value)}
+                />
+            </div>
+            <button id='login-button' type="submit">
+        login
+            </button>
+        </form>
     )
 }
 

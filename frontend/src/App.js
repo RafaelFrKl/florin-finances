@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import loginService from './services/login'
 import storageService from './services/storage'
 
-import LoginForm from './components/Login'
+import LoginForm from './components/LoginForm'
 import Notification from './components/Notification'
 
 const App = () => {
