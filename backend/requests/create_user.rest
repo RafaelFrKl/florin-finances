@@ -1,0 +1,30 @@
+### Create User
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "name": "TestUser",
+    "password": "testpass"
+}
+
+### Get All Users
+GET http://localhost:3001/api/users
+Content-Type: application/json
+
+### Get individual User
+GET http://localhost:3001/api/users/648b8aa2e305bf16563037e1
+Content-Type: application/json
+
+### Test - Update User
+PUT http://localhost:3001/api/users/648b8aa2e305bf16563037e1
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "name": "Test",
+    "password": "testpass"
+}
+
+### Delete User
+DELETE  http://localhost:3001/api/users/648b8aa2e305bf16563037e1
