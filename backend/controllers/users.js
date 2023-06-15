@@ -60,4 +60,14 @@ router.put('/:id', async (request, response, next) => {
         .catch(error => next(error))
 })
 
+// Delete User
+router.delete('/:id', async (request, response) => {
+    const user = await User.findById(request.params.id)
+    if (!user) {
+        return response.status(401).json({ error: 'operation not permitted' })
+    }
+    await User.findByIdAndDelete(request.params.id)
+    response.status(204).end()
+})
+
 module.exports = router

@@ -13,11 +13,11 @@ GET http://localhost:3001/api/users
 Content-Type: application/json
 
 ### Get individual User
-GET http://localhost:3001/api/users/648b8aa2e305bf16563037e1
+GET http://localhost:3001/api/users/648b943a03b416bc51f992d3
 Content-Type: application/json
 
 ### Test - Update User
-PUT http://localhost:3001/api/users/648b8aa2e305bf16563037e1
+PUT http://localhost:3001/api/users/648b943a03b416bc51f992d3
 Content-Type: application/json
 
 {
@@ -27,4 +27,4 @@ Content-Type: application/json
 }
 
 ### Delete User
-DELETE  http://localhost:3001/api/users/648b8aa2e305bf16563037e1
+DELETE  http://localhost:3001/api/users/648b943a03b416bc51f992d3
