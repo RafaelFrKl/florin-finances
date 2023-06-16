@@ -29,21 +29,22 @@ const App = () => {
             const user = await loginService.login({ username, password })
             setUser(user)
             storageService.saveUser(user)
-            notifyWith('welcome!')
+            notifyWith(`Welcome ${user.name}!`)
         } catch(e) {
-            notifyWith('wrong username or password', 'error')
+            notifyWith('Wrong Username or Password', 'error')
         }
     }
 
     const logout = async () => {
         setUser(null)
         storageService.removeUser()
-        notifyWith('logged out')
+        notifyWith('Logged Out')
     }
 
     if (!user) {
         return (
             <div>
+                <h1>Florin Finances</h1>
                 <h2>log in to application</h2>
                 <Notification info={info} />
                 <LoginForm login={login} />
@@ -53,11 +54,11 @@ const App = () => {
 
     return (
         <div>
-            <h2>blogs</h2>
+            <h1>Florin Finances</h1>
             <Notification info={info} />
             <div>
-                {user.name} logged in
-                <button onClick={logout}>logout</button>
+                <p>{user.name} logged in</p>
+                <button className="btn btn-primary" onClick={logout}>Logout</button>
             </div>
         </div>
     )

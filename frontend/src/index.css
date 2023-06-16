@@ -17,17 +17,34 @@ h3 {
 }
 
 label {
-    color: #959595;
-    font-size: 1em;
+    color: #c9c9c9;
+    font-size: 1.17em;
     font-weight: bolder;
 }
 
 p {
-    color: #959595;
+    color: #c9c9c9;
     font-size: 1em;
 }
 
 body {
     background-color: #282828;
     margin: 5%;
+}
+
+.btn-primary {
+    color: #282828;
+    font-weight: bold;
+    background-color: #eec886;
+    border-color: #eec886;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
+    color: #282828;
+    background-color: #a38755;
+    border-color: #a38755;
 }
