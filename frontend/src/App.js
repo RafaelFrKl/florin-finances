@@ -3,6 +3,7 @@ import loginService from './services/login'
 import storageService from './services/storage'
 
 import LoginForm from './components/LoginForm'
+import Modal from './components/Modal'
 import Notification from './components/Notification'
 
 const App = () => {
@@ -44,7 +45,10 @@ const App = () => {
     if (!user) {
         return (
             <div>
-                <h1>Florin Finances</h1>
+                <div className="d-flex justify-content-between">
+                    <h1>Florin Finances</h1>
+                    <Modal />
+                </div>
                 <h2>log in to application</h2>
                 <Notification info={info} />
                 <LoginForm login={login} />
