@@ -36,9 +36,9 @@ plaidrouter.post('/generate_link_token', async (req, res, next) => {
     try {
         const linkTokenConfig = {
             user: { client_user_id: username },
-            client_name: 'Plaid Tutorial',
+            client_name: 'Florin Finances',
             language: 'en',
-            products: ['auth'],
+            products: ['auth', 'transactions'],
             country_codes: ['CA'],
             webhook: 'https://www.example.com/webhook',
         }
