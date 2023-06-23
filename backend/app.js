@@ -37,6 +37,9 @@ app.use(express.static('public'))
 app.use(cors())
 app.use(express.json())
 
+//Use Production Build
+app.use(express.static('build'))
+
 app.use('/api/users', usersRouter)
 app.use('/api/login', loginRouter)
 app.use('/api/plaid', plaidRouter)
