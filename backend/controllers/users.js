@@ -44,6 +44,22 @@ router.get('/:id', async (request, response) => {
     }
 })
 
+// Add AccessToken to User
+router.patch('/:id', async (request, response) => {
+    const { accessToken } = request.body
+    console.log('accessToken:', request.body)
+    console.log('accessToken:', accessToken)
+
+    const saltRounds = 10
+    const accessTokenHash = await bcrypt.hash(accessToken, saltRounds)
+
+    const user = {
+        accessTokenHash: accessTokenHash,
+    }
+    const updatedUser = await User.findByIdAndUpdate(request.params.id, user)
+    response.status(200).json(updatedUser)
+})
+
 // Test - Update User
 router.put('/:id', async (request, response, next) => {
     const body = request.body
