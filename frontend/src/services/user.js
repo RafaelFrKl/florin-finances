@@ -1,6 +1,6 @@
 let token = null
 
-const STORAGE_KEY = 'loggedBlogAppUser'
+const STORAGE_KEY = 'loggedFlorinAppUser'
 
 const setUser = (user) => {
     window.localStorage.setItem(
@@ -28,5 +28,8 @@ const clearUser = () => {
 const getToken = () => token
 
 export default {
-    setUser, getUser, clearUser, getToken
+    setUser,
+    getUser,
+    clearUser,
+    getToken
 }
