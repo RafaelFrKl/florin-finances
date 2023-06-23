@@ -5,3 +5,19 @@ Content-Type: application/json
 ### Generate Link Token
 POST http://localhost:3001/api/plaid/generate_link_token
 Content-Type: application/json
+
+### Get Item Info
+POST http://localhost:3001/api/plaid/get_item_info
+Content-Type: application/json
+
+{
+    "accessToken": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc"
+}
+
+### Get Account Info
+POST http://localhost:3001/api/plaid/get_accounts_info
+Content-Type: application/json
+
+{
+    "accessToken": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc"
+}
