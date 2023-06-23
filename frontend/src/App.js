@@ -122,11 +122,11 @@ const App = () => {
             <div>
                 <p>{user.name} logged in</p>
                 <Button handleClick={logout} text="Logout" />
-                <p>Connect to a bank!</p>
+                <p>Connect to a bank for AccessToken!</p>
                 <Button handleClick={handleInitializeLink} text="Step 1: Start Plaid Link" />
                 <Button handleClick={open} text="Step 2: Connect a bank account" />
                 <Button handleClick={handleExchangeToken} text="Step 3: Exchange a public token" />
-                <p>Basic get my account status functions</p>
+                <p>Basic get my account status functions after recieving AccessToken </p>
                 <Button handleClick={handleGetAccountsInfo} text="Get info about my account(s)" />
                 <Button handleClick={handleGetItemInfo} text="Get into about my Item" />
                 <div>
