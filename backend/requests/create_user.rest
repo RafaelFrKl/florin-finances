@@ -14,11 +14,19 @@ GET http://localhost:3001/api/users
 Content-Type: application/json
 
 ### Get individual User
-GET http://localhost:3001/api/users/648b952f409b802a0e4ec553
+GET http://localhost:3001/api/users/6495ef038182b613b2da46e6
 Content-Type: application/json
 
+### Add AccessToken to User
+PATCH http://localhost:3001/api/users/6495ef038182b613b2da46e6
+Content-Type: application/json
+
+{
+    "accessToken": "accessToken"
+}
+
 ### Test - Update User
-PUT http://localhost:3001/api/users/648b952f409b802a0e4ec553
+PUT http://localhost:3001/api/users/6495ef038182b613b2da46e6
 Content-Type: application/json
 
 {
@@ -29,4 +37,4 @@ Content-Type: application/json
 }
 
 ### Delete User
-DELETE  http://localhost:3001/api/users/648b952f409b802a0e4ec553
+DELETE  http://localhost:3001/api/users/6495ef038182b613b2da46e6

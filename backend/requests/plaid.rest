@@ -1,0 +1,7 @@
+// Run Plaid Precheck
+GET http://localhost:3001/api/plaid/run_precheck
+Content-Type: application/json
+
+### Generate Link Token
+POST http://localhost:3001/api/plaid/generate_link_token
+Content-Type: application/json
