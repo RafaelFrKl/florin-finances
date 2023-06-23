@@ -121,7 +121,7 @@ const App = () => {
             <Notification info={info} />
             <div>
                 <p>{user.name} logged in</p>
-                <button className="btn btn-primary" onClick={logout}>Logout</button>
+                <Button handleClick={logout} text="Logout" />
                 <p>Connect to a bank!</p>
                 <Button handleClick={handleInitializeLink} text="Step 1: Start Plaid Link" />
                 <Button handleClick={open} text="Step 2: Connect a bank account" />
