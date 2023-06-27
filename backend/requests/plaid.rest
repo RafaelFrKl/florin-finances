@@ -21,3 +21,54 @@ Content-Type: application/json
 {
     "accessToken": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc"
 }
+
+### Get Auth Info
+POST https://sandbox.plaid.com/auth/get
+Content-Type: application/json
+
+{
+    "access_token": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc",
+    "client_id": "63f92491ecde08001252433b",
+    "secret": "26f925b5244dbda9135d7d360a5d90"
+}
+
+### Get Transactions by Incremental Updates
+POST https://sandbox.plaid.com/transactions/sync
+Content-Type: application/json
+
+{
+    "access_token": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc",
+    "client_id": "63f92491ecde08001252433b",
+    "secret": "26f925b5244dbda9135d7d360a5d90",
+    "count": 5
+}
+
+### Get Transactions by Date Range
+POST https://sandbox.plaid.com/transactions/get
+Content-Type: application/json
+
+{
+    "access_token": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc",
+    "client_id": "63f92491ecde08001252433b",
+    "secret": "26f925b5244dbda9135d7d360a5d90",
+    "start_date": "2023-04-14",
+    "end_date": "2024-04-17"
+}
+
+### Get Transaction Categories
+POST https://sandbox.plaid.com/categories/get
+Content-Type: application/json
+
+{
+}
+
+### Get Balance Info
+POST https://sandbox.plaid.com/accounts/balance/get
+Content-Type: application/json
+
+{
+    "access_token": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc",
+    "client_id": "63f92491ecde08001252433b",
+    "secret": "26f925b5244dbda9135d7d360a5d90"
+}
+
