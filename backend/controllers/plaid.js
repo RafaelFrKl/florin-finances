@@ -99,4 +99,19 @@ plaidrouter.post('/get_accounts_info', async (request, res, next) => {
     }
 })
 
+// Get Balance Info
+plaidrouter.post('https://sandbox.plaid.com/accounts/balance/get', async (request, res, next) => {
+    console.log('Balances: ', request.body)
+    try {
+        const balanceResult = await plaidClient.balanceGet({
+            access_token: request.body.accessToken,
+            client_id: process.env.PLAID_CLIENT_ID,
+            secret: process.env.PLAID_SECRET,
+        })
+        res.json(balanceResult.data)
+    } catch (error) {
+        next(error)
+    }
+})
+
 module.exports = plaidrouter

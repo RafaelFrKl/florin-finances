@@ -11,7 +11,7 @@ POST http://localhost:3001/api/plaid/get_item_info
 Content-Type: application/json
 
 {
-    "accessToken": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc"
+    "accessToken": "access-sandbox-25d6a4a0-33f6-479d-be3e-dda5e54c4854"
 }
 
 ### Get Account Info
@@ -19,7 +19,7 @@ POST http://localhost:3001/api/plaid/get_accounts_info
 Content-Type: application/json
 
 {
-    "accessToken": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc"
+    "accessToken": "access-sandbox-25d6a4a0-33f6-479d-be3e-dda5e54c4854"
 }
 
 ### Get Auth Info
@@ -27,7 +27,7 @@ POST https://sandbox.plaid.com/auth/get
 Content-Type: application/json
 
 {
-    "access_token": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc",
+    "access_token": "access-sandbox-25d6a4a0-33f6-479d-be3e-dda5e54c4854",
     "client_id": "63f92491ecde08001252433b",
     "secret": "26f925b5244dbda9135d7d360a5d90"
 }
@@ -37,7 +37,7 @@ POST https://sandbox.plaid.com/transactions/sync
 Content-Type: application/json
 
 {
-    "access_token": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc",
+    "access_token": "access-sandbox-25d6a4a0-33f6-479d-be3e-dda5e54c4854",
     "client_id": "63f92491ecde08001252433b",
     "secret": "26f925b5244dbda9135d7d360a5d90",
     "count": 5
@@ -48,7 +48,7 @@ POST https://sandbox.plaid.com/transactions/get
 Content-Type: application/json
 
 {
-    "access_token": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc",
+    "access_token": "access-sandbox-25d6a4a0-33f6-479d-be3e-dda5e54c4854",
     "client_id": "63f92491ecde08001252433b",
     "secret": "26f925b5244dbda9135d7d360a5d90",
     "start_date": "2023-04-14",
@@ -67,7 +67,7 @@ POST https://sandbox.plaid.com/accounts/balance/get
 Content-Type: application/json
 
 {
-    "access_token": "access-sandbox-f795e250-fc42-461b-8bae-fa46eee982fc",
+    "access_token": "access-sandbox-25d6a4a0-33f6-479d-be3e-dda5e54c4854",
     "client_id": "63f92491ecde08001252433b",
     "secret": "26f925b5244dbda9135d7d360a5d90"
 }

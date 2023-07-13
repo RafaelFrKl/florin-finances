@@ -14,7 +14,7 @@ GET http://localhost:3001/api/users
 Content-Type: application/json
 
 ### Get individual User
-GET http://localhost:3001/api/users/6495ef038182b613b2da46e6
+GET http://localhost:3001/api/users/649b738f82e7e4e687fc18e6
 Content-Type: application/json
 
 ### Add AccessToken to User
@@ -37,4 +37,4 @@ Content-Type: application/json
 }
 
 ### Delete User
-DELETE  http://localhost:3001/api/users/6495ef038182b613b2da46e6
+DELETE  http://localhost:3001/api/users/649b738f82e7e4e687fc18e6
