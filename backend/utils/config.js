@@ -8,7 +8,7 @@ const MONGODB_URI = process.env.NODE_ENV === 'test'
 
 // Set up the Plaid client - Initialize the Plaid client library for NodeJS
 const PLAID_CONFIG = new Configuration({
-    basePath: PlaidEnvironments[process.env.PLAID_ENV], //sandbox or development
+    basePath: PlaidEnvironments['sandbox'], //sandbox or development
     baseOptions: {
         headers: {
             'PLAID-CLIENT-ID': process.env.PLAID_CLIENT_ID,
