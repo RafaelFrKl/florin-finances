@@ -233,7 +233,10 @@ const App = () => {
     }
     return (
         <div>
-            <h1>Florin Finances</h1>
+            <div className="d-flex justify-content-between">
+                <h1>Florin Finances</h1>
+                <Modal />
+            </div>
             <Notification info={info} />
             <div>
                 <p>{user.name} logged in</p>
