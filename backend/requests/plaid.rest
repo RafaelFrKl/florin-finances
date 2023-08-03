@@ -11,7 +11,7 @@ POST http://localhost:3001/api/plaid/get_item_info
 Content-Type: application/json
 
 {
-    "accessToken": "access-sandbox-25d6a4a0-33f6-479d-be3e-dda5e54c4854"
+    "accessToken": "access-sandbox-token"
 }
 
 ### Get Account Info
@@ -19,7 +19,7 @@ POST http://localhost:3001/api/plaid/get_accounts_info
 Content-Type: application/json
 
 {
-    "accessToken": "access-sandbox-25d6a4a0-33f6-479d-be3e-dda5e54c4854"
+    "accessToken": "access-sandbox-token"
 }
 
 ### Get Auth Info
@@ -27,7 +27,7 @@ POST http://localhost:3001/api/plaid/auth/get
 Content-Type: application/json
 
 {
-    "access_token": "access-sandbox-1079f892-6f3d-4201-9da1-2d8ce250be3d"
+    "access_token": "access-sandbox-token"
 }
 
 ### Get Balance Info
@@ -35,7 +35,7 @@ POST http://localhost:3001/api/plaid/accounts/balance/get
 Content-Type: application/json
 
 {
-    "access_token": "access-sandbox-1079f892-6f3d-4201-9da1-2d8ce250be3d"
+    "access_token": "access-sandbox-token"
 }
 
 ### Get Transactions by Incremental Updates
@@ -43,7 +43,7 @@ POST http://localhost:3001/api/plaid/transactions/sync
 Content-Type: application/json
 
 {
-    "access_token": "access-sandbox-1079f892-6f3d-4201-9da1-2d8ce250be3d",
+    "access_token": "access-sandbox-token",
     "count": 5
 }
 
@@ -52,7 +52,7 @@ POST http://localhost:3001/api/plaid/transactions/get
 Content-Type: application/json
 
 {
-    "access_token": "access-sandbox-1079f892-6f3d-4201-9da1-2d8ce250be3d",
+    "access_token": "access-sandbox-token",
     "start_date": "2023-04-14",
     "end_date": "2024-04-17"
 }
