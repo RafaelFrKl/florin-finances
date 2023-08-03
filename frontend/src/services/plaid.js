@@ -51,10 +51,59 @@ const runPrecheck = async function () {
     }
 }
 
+const authGet = async (accessToken) => {
+    const body = {
+        access_token: accessToken
+    }
+    // console.log(body)
+    const ret = await axios.post('api/plaid/auth/get', body)
+    console.log(ret.data)
+    showOutput(JSON.stringify(ret))
+}
+
+const balanceGet = async (accessToken) => {
+    const body = {
+        access_token: accessToken
+    }
+
+    const ret = await axios.post('/api/plaid/accounts/balance/get', body)
+    // console.log(ret.data.accounts)
+    // showOutput(JSON.stringify(ret))
+    return ret.data.accounts
+}
+
+const transactionsSync = async (accessToken, count) => {
+    const body = {
+        access_token: accessToken,
+        count: count
+    }
+
+    const ret = await axios.post('/api/plaid/transactions/sync', body)
+    console.log(ret.data)
+    showOutput(JSON.stringify(ret))
+}
+
+const transactionsGet = async (accessToken, start_date, end_date) => {
+    const body = {
+        access_token: accessToken,
+        start_date: start_date,
+        end_date: end_date,
+    }
+
+    const ret = await axios.post('/api/plaid/transactions/get', body)
+    // console.log(ret.data)
+    // showOutput(JSON.stringify(ret))
+    return ret.data.transactions
+}
+
 runPrecheck()
 
 export default {
     exchangeToken,
     getAccountsInfo,
     getItemInfo,
+    authGet,
+    balanceGet,
+    transactionsSync,
+    transactionsGet,
 }

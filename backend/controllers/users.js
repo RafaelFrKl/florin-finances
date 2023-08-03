@@ -12,6 +12,12 @@ router.post('/', async (request, response) => {
         })
     }
 
+    const duplicate_user = await User.find({ username:username })
+    if ( duplicate_user.length !== 0) {
+        return response.status(400).json({
+            error: 'The `username` is unavailable. Please choose another one.'
+        })
+    }
     const saltRounds = 10
     const passwordHash = await bcrypt.hash(password, saltRounds)
 
@@ -50,11 +56,11 @@ router.patch('/:id', async (request, response) => {
     console.log('accessToken:', request.body)
     console.log('accessToken:', accessToken)
 
-    const saltRounds = 10
-    const accessTokenHash = await bcrypt.hash(accessToken, saltRounds)
+    //const saltRounds = 10
+    //const accessTokenHash = await bcrypt.hash(accessToken, saltRounds)
 
     const user = {
-        accessTokenHash: accessTokenHash,
+        accessTokenHash: accessToken, //accessTokenHash,
     }
     const updatedUser = await User.findByIdAndUpdate(request.params.id, user)
     response.status(200).json(updatedUser)
@@ -80,6 +86,7 @@ router.put('/:id', async (request, response, next) => {
 
 // Delete User
 router.delete('/:id', async (request, response) => {
+    console.log("deleting with id "+request.params.id)
     const user = await User.findById(request.params.id)
     if (!user) {
         return response.status(401).json({ error: 'operation not permitted' })

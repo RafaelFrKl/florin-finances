@@ -18,3 +18,9 @@
     text-align: center;
     white-space: pre-wrap;
 }
+
+.display-linebreak {
+    white-space: pre-line;
+    color: #c9c9c9;
+    font-size: 1em;
+}

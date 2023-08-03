@@ -1,6 +1,9 @@
+// Import required modules
 const plaidrouter = require('express').Router()
 const { PlaidApi } = require('plaid')
 const config = require('../utils/config')
+
+// Create Plaid client instance
 const plaidClient = new PlaidApi(config.PLAID_CONFIG)
 
 // eslint-disable-next-line no-unused-vars
@@ -99,16 +102,72 @@ plaidrouter.post('/get_accounts_info', async (request, res, next) => {
     }
 })
 
+// Get Auth Details
+plaidrouter.post('/auth/get', async (request, res, next) => {
+    console.log('Get Auth Details Request: ', request.body)
+    console.log('Access_Token: ', request.body.access_token)
+    try {
+        // Call the Plaid API to get auth details
+        const authResult = await plaidClient.authGet({
+            access_token: request.body.access_token,
+            client_id: process.env.PLAID_CLIENT_ID,
+            secret: process.env.PLAID_SECRET,
+        })
+
+        // Handle the response and send it as JSON
+        res.json(authResult.data)
+    } catch (error) {
+        next(error)
+    }
+})
+
 // Get Balance Info
-plaidrouter.post('https://sandbox.plaid.com/accounts/balance/get', async (request, res, next) => {
+plaidrouter.post('/accounts/balance/get', async (request, res, next) => {
     console.log('Balances: ', request.body)
     try {
-        const balanceResult = await plaidClient.balanceGet({
-            access_token: request.body.accessToken,
+        const balanceResult = await plaidClient.accountsBalanceGet({
+            access_token: request.body.access_token,
+            //account_id: request.body.accountId, // Replace 'accountId' with the actual property name containing the account_id
             client_id: process.env.PLAID_CLIENT_ID,
             secret: process.env.PLAID_SECRET,
         })
         res.json(balanceResult.data)
+    } catch (error) {
+        next(error)
+    }
+})
+
+// Get Transactions by Incremental Updates
+plaidrouter.post('/transactions/sync', async (request, res, next) => {
+    console.log('Sync Transactions Request: ', request.body)
+    try {
+        // Call the Plaid API to sync transactions
+        const syncResult = await plaidClient.transactionsSync({
+            access_token: request.body.access_token,
+            count: request.body.count,
+            client_id: process.env.PLAID_CLIENT_ID,
+            secret: process.env.PLAID_SECRET,
+        })
+        res.json(syncResult.data)
+    } catch (error) {
+        next(error)
+    }
+})
+
+// Get Transactions by Date Range
+plaidrouter.post('/transactions/get', async (request, res, next) => {
+    console.log('Get Transactions Request: ', request.body)
+    try {
+    // Call the Plaid API to get transactions
+        const transactionsResult = await plaidClient.transactionsGet({
+            access_token: request.body.access_token,
+            start_date: request.body.start_date,
+            end_date: request.body.end_date,
+            client_id: process.env.PLAID_CLIENT_ID,
+            secret: process.env.PLAID_SECRET,
+        })
+        // Handle the response and send it as JSON
+        res.json(transactionsResult.data)
     } catch (error) {
         next(error)
     }

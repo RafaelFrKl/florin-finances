@@ -14,11 +14,11 @@ GET http://localhost:3001/api/users
 Content-Type: application/json
 
 ### Get individual User
-GET http://localhost:3001/api/users/649b738f82e7e4e687fc18e6
+GET http://localhost:3001/api/users/64c2e6490cece4d9ea6bf7f1
 Content-Type: application/json
 
 ### Add AccessToken to User
-PATCH http://localhost:3001/api/users/6495ef038182b613b2da46e6
+PATCH http://localhost:3001/api/users/64c2e6490cece4d9ea6bf7f1
 Content-Type: application/json
 
 {

@@ -1,12 +1,12 @@
 h1 {
     color: #eec886;
-    font-size: 2em;
+    font-size: 2.75em;
     font-weight: bolder;
 }
 
 h2 {
     color: #eec886;
-    font-size: 1.5em;
+    font-size: 2.25em;
     font-weight: bolder;
 }
 
@@ -39,6 +39,14 @@ body {
     border-color: #eec886;
 }
 
+.registB{
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    
+    border-radius: 15px;
+}
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
@@ -47,4 +55,128 @@ body {
     color: #282828;
     background-color: #a38755;
     border-color: #a38755;
+}
+
+.title{
+    color:#fff;
+
+    font-size: 18px;
+    font-weight: 200;
+}
+.title span{
+    border-bottom: 3px solid rgb(237,221,22);
+}
+
+.login_box{
+    /* position: absolute; */
+    width: 600px;
+    height: 329px;
+    margin: 0 auto;
+    margin-top: 10%;
+    border-radius: 15px;
+    box-shadow: 0 10px 50px 0px rgb(59,45,159);
+    background-color: rgb(95,76,194);
+    z-index: 1;
+}
+
+.login_left{
+    display: inline-block;
+    width: 400px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-top: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 10px;
+    /* padding: 60px; */
+    background-image: linear-gradient(to bottom right, rgb(118,76,163),rgb(92,103,211));
+}
+
+.input_box{
+    padding: 20px 0;
+}
+
+.form-control{
+    border:0;
+    background: none;
+    outline: none;
+    color: #fff;
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    transition: .2s;
+    border-bottom: 1px solid rgb(199,191,219);
+}
+
+.login_right{
+    width:145px;
+    display:inline-block;
+    height:calc(100%-120px);
+    vertical-align: top;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.register_box{
+    color: #fff;
+    font-size:18px;
+    font-weight:200;
+    /* background-color: #eec886; */
+    margin-left: 30%;
+    display: inline-block;
+    
+}
+
+.register_box span{
+    border-bottom: 3px solid rgb(237,221,22);
+}
+
+.action_container{
+font-size: 10px;
+color: #fff;
+text-align: center;
+position: relative;
+top: 75px;
+}
+
+.QRcode{
+    margin-top: 20%;
+    background-color: #a38755;
+    width:120px;
+    height: 120px;
+    margin-left: 25%;
+}
+
+.QRImage{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.action_container span{
+    border: 1px solid rgb(237,221,22);
+    padding:10px;
+    display: inline;
+    line-height: 20px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 10px;
+    left:calc(72px-20x);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.loginButton{
+    margin-top: 20px;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(237,221,22);
+    display: inline;
+    line-height: 20px;
+    border-radius: 20px;
+    bottom: 10px;
+    font-size: 14px;
 }

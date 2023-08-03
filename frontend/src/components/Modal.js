@@ -8,6 +8,8 @@ const Modal = () => {
         setIsOpen(!isOpen)
     }
 
+    const text = 'Admin Credentials \n username: testuser \n password: testpass \n\n PLAID Bank Credentials \n username: user_good \n password: pass_good'
+
     return (
         <div className="text-end">
             <button className="btn btn-primary" onClick={toggleModal}>
@@ -23,7 +25,9 @@ const Modal = () => {
                             <button className="btn-close btn-close-white" aria-label="Close" onClick={toggleModal}></button>
                         </div>
                         <h2>Info</h2>
-                        <p>Description of how the app works</p>
+                        <div className="display-linebreak">
+                            {text}
+                        </div>
                     </div>
                 </div>
             )}

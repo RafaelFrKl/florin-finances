@@ -1,0 +1,17 @@
+.table th {
+    background-color: #282828;
+    /* Change this to the desired background color for table headers */
+    color: #c9c9c9;
+}
+
+.table tr {
+    background-color: #282828;
+    /* Change this to the desired background color for table rows */
+    color: #c9c9c9;
+}
+
+.table td {
+    background-color: #282828;
+    /* Change this to the desired background color for table cells */
+    color: #c9c9c9;
+}
